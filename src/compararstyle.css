@@ -8,6 +8,11 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 /* HEADER*/
 
 .h-comparar {
@@ -282,10 +287,26 @@ body {
 }
 
 
-/*RESPONSIVE-pantallas chicas*/
+/*RESPONSIVE*/
 
-@media (max-width: 900px) {
+@media (max-width: 900px) {.seleccion-actual {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .slot-seleccion {
+    min-width: auto;
+    width: 100%;
+  }
+
   .grilla-personajes {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filtros-especie {padding: 20px 20px;
+  }
+
+
+  .controles {
+    padding: 20px 20px 40px;
   }
 }

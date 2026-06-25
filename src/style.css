@@ -245,14 +245,18 @@ header p {
 }
 
 /*RESPONSIVE*/
-@media (max-width: 900px) {
-  header {
+@media (max-width: 900px) {header {
     flex-direction: column;
     text-align: center;
   }
 
   .header-texto {
     align-items: center;
+  }
+  header h1 {font-size: 30px;
+  }
+  .rick {
+    width: 200px;
   }
 
   .DATOS-CURIOSOS {
