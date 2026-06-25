@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Comparador Rick and Morty</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-texto">
+
+          <span class="etiqueta-header">⚡ DATOS EN VIVO DESDE LA API</span>
+
+          <h1>COMPARÁ PERSONAJES DE <span class="resaltar">RICK AND MORTY</span></h1>
+
+          <p>Elegi dos personajes y descubri sus diferencias como especie, estado y origen</p>
+          <div class="botones">
+            <a href="comparar.html" class="botones boton-comparar">Comenzá a comparar</a>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick" class="rick">
+        </div>
+      </header>
+
+      <h2 class="sabiasque">
+        <span></span>SABÍAS QUE...<span></span>
+      </h2>
+
+
+      <section class="DATOS-CURIOSOS">
+
+        <div class="bloque-dato color-1">
+          <h3>El PEPINILLO 🥒</h3>
+          <p>Rick prefirió convertirse en un pepinillo antes que ir a terapia</p>
+          <a href="detalle.html?dato=1" class="link-tarjeta">VER MÁS →</a>
+        </div>
+
+        <div class="bloque-dato color-2">
+          <h3>EL MAS ROMANTICO 💘</h3>
+          <p>Morty provocó desastres interdimensionales intentando impresionar a una chica</p>
+          <a href="detalle.html?dato=2" class="link-tarjeta">VER MÁS →</a>
+        </div>
+
+        <div class="bloque-dato color-3">
+          <h3>LA COMIDA AL REVES 🍕</h3>
+          <p>Existe un universo donde las pizzas piden personas para comer</p>
+          <a href="detalle.html?dato=3" class="link-tarjeta">VER MÁS →</a>
+        </div>
+
+        <div class="bloque-dato color-4">
+          <h3>EL PERRO MAS INTELIGENTE 🐶</h3>
+          <p>El perro de la familia se volvió tan inteligente que estuvo a punto de dominar el planeta</p>
+          <a href="detalle.html?dato=4" class="link-tarjeta">VER MÁS →</a>
+        </div>
+
+        <div class="bloque-dato color-5">
+          <h3>CRISIS EXISTENCIAL BUTTER 🧈</h3>
+          <p>Butter Bot descubrió que su único propósito en la vida era pasar la manteca</p>
+          <a href="detalle.html?dato=5" class="link-tarjeta">VER MÁS →</a>
+        </div>
+
+      </section>
+    </div>
+
+    <div>
+
+      <footer class="footer-estadisticas">
+        <div class="dato-footer">
+          <div class="emoji">🧪</div>
+          <h3 id="cantPersonajesFooter">826</h3>
+          <p>Personajes</p>
+        </div>
+        <div class="dato-footer">
+          <div class="emoji">🌌</div>
+          <h3 id="cantUbicacionesFooter">126</h3>
+          <p>Ubicaciones</p>
+        </div>
+
+        <div class="dato-footer">
+          <div class="emoji">📺</div>
+          <h3 id="cantEpisodiosFooter">51</h3>
+          <p>Episodios</p>
+        </div>
+        <div class="dato-footer">
+          <div class="emoji">⭐</div>
+          <h3 id="puntaje">9.1</h3>
+          <p>Puntaje</p>
+        </div>
+      </footer>
+
+    </div>
+
+    <script type="module" src="./src/index.js"></script>
+
+  </body>
+</html>

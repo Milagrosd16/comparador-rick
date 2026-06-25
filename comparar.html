@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/compararstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Comparar personajes</title>
+</head>
+<body>
+
+  <header class="h-comparar">
+    <a href="index.html" class="volver">← Volver</a>
+    <h1>ELEGÍ DOS PERSONAJES PARA COMPARAR</h1>
+  </header>
+
+  <section class="filtros-especie">
+    <button class="btn-especie especie-human" data-especie="Human">Human</button>
+    <button class="btn-especie especie-alien" data-especie="Alien">Alien</button>
+    <button class="btn-especie especie-robot" data-especie="Robot">Robot</button>
+    <button class="btn-especie especie-humanoid" data-especie="Humanoid">Humanoid</button>
+    <button class="btn-especie especie-todos" data-especie="todos">Todos</button>
+   </section>
+
+
+  <section class="controles">
+    <input type="text" id="buscador" placeholder="Buscar personaje por nombre...">
+    <select id="orden">
+    <option value="nombre-asc">Nombre (A-Z)</option>
+     <option value="nombre-desc">Nombre (Z-A)</option>
+      <option value="id-asc">ID (menor a mayor)</option>
+    </select>
+  </section>
+
+  <section class="seleccion-actual">
+    <div class="slot-seleccion" id="slot1">
+      <p>Personaje 1</p>
+      <span id="nombre1">Elegí un personaje</span>
+    </div>
+    <div class="vs">VS</div>
+    <div class="slot-seleccion" id="slot2">
+      <p>Personaje 2</p>
+      <span id="nombre2">Elegí un personaje</span>
+    </div>
+  </section>
+  <button id="btnComparar" class="boton-comparar" disabled>Comparar personajes</button>
+ 
+  <p id="mensaje" class="mensaje"></p>
+ 
+  <section class="grilla-personajes" id="grillaPersonajes"></section>
+  <section class="resultado-comparacion" id="resultadoComparacion"></section>
+  <script type="module" src="./src/comparar.js"></script>
+</body>
+</html>

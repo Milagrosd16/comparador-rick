@@ -1,0 +1,291 @@
+* { margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0e0c;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER*/
+
+.h-comparar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+.h-comparar h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #ffffff;
+}
+.volver {
+  color: #39ff88;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  align-self: flex-start;
+  margin-left: 40px;
+}
+/* animacoin */
+.volver:hover {
+  text-decoration: underline;
+}
+
+
+
+/* FILTROS POR ESPECIE*/
+
+.filtros-especie {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+}
+
+.btn-especie {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #0a0e0c;
+}
+/* animacoin */
+.btn-especie:hover {
+  transform: translateY(-3px);
+}
+
+.especie-human {
+  background-color: #39ff88;
+}
+.especie-alien {
+  background-color: #2bffc7;
+}
+
+.especie-robot {
+  background-color: #9dffb0;
+}
+
+.especie-humanoid {
+  background-color: #6dffa8;
+}
+
+.especie-todos {
+  background-color: #ffffff;
+}
+
+/* clase que se agrega por JS al boton de especie activo */
+.btn-especie.activo {
+  box-shadow: 0 0 0 3px #ffffff;
+}
+
+
+/* BUSCADOR Y ORDEN*/
+
+.controles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 60px 40px;
+  flex-wrap: wrap;
+}
+
+#buscador {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 1px solid #1f2922;
+  background-color: #11201a;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  min-width: 280px;
+}
+
+#buscador::placeholder {
+  color: #8a9990;
+}
+
+#orden {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 1px solid #1f2922;
+  background-color: #11201a;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.seleccion-actual {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.slot-seleccion {
+  background-color: #11201a;
+  border: 1px solid #1f2922;
+  border-radius: 10px;
+  padding: 16px 30px;
+  text-align: center;
+  min-width: 220px;
+}
+
+.slot-seleccion p {
+  color: #8a9990;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.slot-seleccion span {
+  color: #39ff88;
+  font-size: 18px;
+  font-weight: 700;
+}
+.vs {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+
+/* COMPARAR btm*/
+
+.boton-comparar {
+  display: block;
+  margin: 20px auto 40px;
+  padding: 18px 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #39ff88;
+  color: #0a0e0c;
+  box-shadow: 0 0 20px rgba(57, 255, 136, 0.4);
+  transition: 0.3s;
+}
+
+.boton-comparar:hover {
+  background-color: #2be077;
+  transform: translateY(-3px);
+}
+
+/*estado deshabilitado, mientras no se eligieron los 2 personajes*/
+.boton-comparar:disabled {
+  background-color: #1f2922;
+  color: #8a9990;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/*MENSAJE DE ERROR*/
+
+.mensaje {
+  text-align: center;
+  color: #ff6b6b;
+  font-weight: 600;
+  padding: 10px;
+}
+
+
+/*PERSONAJES*/
+
+.grilla-personajes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px 60px 60px;
+}
+
+.tarjeta-personaje {
+  background-color: #11201a;
+  border: 2px solid #1f2922;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tarjeta-personaje:hover {
+  transform: scale(1.05);
+  border-color: #39ff88;
+}
+
+/*clase que se agrega por JS cuando un personaje esta seleccionado*/
+.tarjeta-personaje.seleccionado {
+  border-color: #39ff88;
+  box-shadow: 0 0 15px rgba(57, 255, 136, 0.5);
+}
+
+.tarjeta-personaje img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-personaje h4 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.tarjeta-personaje p {
+  color: #8a9990;
+  font-size: 13px;
+}
+/*RESULTADO DE LA COMPARACION*/
+
+.resultado-comparacion {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  padding: 30px;
+  background-color: #11201a;
+  border: 1px solid #39ff88;
+  border-radius: 10px;
+  color: #ffffff;
+}
+.resultado-comparacion:empty {
+  display: none; /*no se ve nada hasta que JS le mete contenido*/
+}
+
+.resultado-comparacion h2 {
+  color: #39ff88;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.resultado-comparacion ul {
+  list-style: none;
+}
+
+.resultado-comparacion li {
+  padding: 10px 0;
+  border-bottom: 1px solid #1f2922;
+  font-size: 16px;
+}
+
+
+/*RESPONSIVE-pantallas chicas*/
+
+@media (max-width: 900px) {
+  .grilla-personajes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

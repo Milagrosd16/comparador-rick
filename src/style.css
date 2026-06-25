@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0e0c;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+/*HEADER*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 60px;
+  flex-wrap: wrap; /* si la pantalla es chica, las columnas se apilan */
+}
+
+.header-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 560px;
+}
+
+.etiqueta-header {
+  background-color: #11201a;
+  color: #39ff88;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+header h1 .resaltar {
+  color: #39ff88;
+}
+
+header p {
+  font-size: 17px;
+  font-weight: 500;
+  color: #b8c4bd;
+  line-height: 1.5;
+}
+
+/*BOTONES*/
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.boton-comparar {
+  padding: 16px 32px;
+  /* border: none; */
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 750;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #39ff88;
+  color: #000000;
+  box-shadow: 0 0 20px rgba(57, 255, 136, 0.4); /* sombras verdes en el boton */
+  transition: 0.3s;
+}
+
+.boton-comparar:hover {
+  background-color: #2be077;
+  transform: translateY(-8px);
+}
+
+
+/* TITULO "SABIAS QUE"*/
+.sabiasque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 50px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 60px 0 40px;
+}
+
+.sabiasque span {
+  width: 100px;
+  height: 4px;     /* lineas al lado del sabias que  */
+  background: #39ff88;
+  border-radius: 10px;
+}
+
+/*IMAGEN DE RICK (columna derecha del header)*/
+
+.rick {
+  width: 350px;
+  border-radius: 33px;
+  border: 2px solid #39ff88;
+  box-shadow: 0 0 40px rgba(57, 255, 136, 0.35); /* sombras verdes en rick */
+  display: block;
+}
+
+/*DATOS CURIOSOS*/
+
+.DATOS-CURIOSOS {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 60px 60px;
+}
+
+.bloque-dato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #1f2922;
+  transition: all 0.3s;
+}
+
+.bloque-dato:hover {
+  transform: scale(1.05);
+}
+
+/*COLOR DE CADA TARJETA*/
+
+/* primera tajeta */
+.color-1 {
+  background-color: #11201a;
+  color: #39ff88;
+}
+/* animacion */
+.color-1:hover {
+  background-color: #39ff88;
+  color: #0a0e0c;
+}
+/* segunda tajeta */
+.color-2 {
+  background-color: #11201a;
+  color: #39ff88;
+}
+/* animacion */
+.color-2:hover {
+  background-color: #39ff88;
+  color: #0a0e0c;
+}
+/* tercera tajeta */
+.color-3 {
+  background-color: #11201a;
+  color: #39ff88;
+}
+/* animacion */
+.color-3:hover {
+  background-color: #39ff88;
+  color: #0a0e0c;
+}
+/* cuarta tajeta */
+.color-4 {
+  background-color: #11201a;
+  color: #39ff88;
+}
+
+/* animacion */
+.color-4:hover {
+  background-color: #39ff88;
+  color: #0a0e0c;
+}
+/* quinta tajeta */
+.color-5 {
+  background-color: #11201a;
+  color: #39ff88;
+}
+/* animacion */
+.color-5:hover {
+  background-color: #39ff88;
+  color: #0a0e0c;
+}
+
+/*"VER MAS"*/
+
+.link-tarjeta {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  color: inherit;
+  margin-top: auto;
+}
+
+/*FOOTER*/
+
+.footer-estadisticas {
+  margin-top: 80px;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  background-color: #050706;
+  border-top: 1px solid #1f2922;
+}
+
+.emoji {
+  font-size: 35px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.dato-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dato-footer h3 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #39ff88;
+  text-align: center;
+}
+
+.dato-footer p{
+  font-size: 15px;
+  font-weight: 600;
+  color: #8a9990;
+  text-align: center;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-texto {
+    align-items: center;
+  }
+
+  .DATOS-CURIOSOS {
+    grid-template-columns: 1fr;
+  }
+}
